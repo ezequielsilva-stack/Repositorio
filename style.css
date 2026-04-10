@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'titulo1';
+  src: url(fontes/Bitcount_Grid_Double/fonteh1.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'titulo2';
+  src: url(fontes/Bitcount_Grid_Double\,Lato\,Passion_One\,Sriracha/fontetitulo.ttf) format("truetype");
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  text-align: center;
+  background: linear-gradient(270deg, #0f172a, #1e293b, #020617);
+  background-size: 600% 600%;
+  animation: gradient 12s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* TÍTULOS */
+h1 {
+  font-family: var();
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  color: #d737ff;
+
+  text-transform: uppercase;
+  box-shadow: 0 0 5px #d737ff;
+  text-shadow: 0 0 10px #d737ff,
+               0 0 20px #d737ff;
+}
+
+h1#texto {
+  font-family: var(--titulo1), sans-serif;
+  text-align: center;
+  box-shadow: none;
+  text-shadow: none;
+  color: white;
+
+}
+
+h2.texto {
+  font-family: var(--titulo2), sans-serif;
+  font-size: 2em;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  display: flex;
+  flex-direction: column; /* empilha tudo */
+  align-items: center;    /* centraliza horizontal */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* TEXTO */
+.fade {
+  text-align: center center;
+  opacity: 0;
+  animation: aparecer 2s forwards;
+  color: white;
+  font-size: 1.6em;
+  padding: 20px;
+  width: 100%;
+}
+p{
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes aparecer {
+  to {
+    opacity: 1;
+  }
+}
+
+/* IMAGEM PERFIL */
+#perfil {
+  margin: 20px auto;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #d737ff;
+  transition: 0.3s
+}
+
+#perfil:hover {
+  transform: scale(1.05);
+}
+
+/* PROJETOS (IMAGENS) */
+#projetorede,
+#projetoandroid,
+#cordel {
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 0 20px #d737ff;
+  transition: 0.3s;
+}
+
+#projetorede:hover,
+#projetoandroid:hover,
+#cordel:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #d737ff;
+}
+
+/* ÍCONE MENU */
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  z-index: 999;
+}
+
+.overlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay a {
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+  padding: 20px 40px;
+
+  transition: 0.5s;
+}
+
+.overlay a:hover {
+  transform: scale(1.2);
+  color: #d737ff;
+  text-shadow: 0 0 10px #d737ff,
+               0 0 20px #d737ff;
+}
+
+/* LINKS */
+a {
+  color: white;
+  font-style: italic;
+}
+
+a:hover {
+  color: #d737ff;
+  text-shadow: 0 0 10px #d737ff,
+               0 0 20px #d737ff;
+}
+
+/* LISTAS */
+li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fade {
+    width: 100%;
+  }
+
+  #perfil {
+    width: 200px;
+  }
+
+  #projetorede,
+  #projetoandroid,
+  #cordel {
+    width: 90%;
+  }
+}
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  background-color: #9b28b8;
+}

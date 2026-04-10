@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-color: rgb(135, 17, 17);
+}
+main{
+    background-color: rgb(255, 255, 255);
+    padding: 20px; /*Diz o espaçamento interno */
+    margin-bottom: 30px; /*Cria um espaçamento*/
+    box-shadow: 0px 0px 7px rgb(44, 43, 43);
+    min-width: 300px; /*Diz o tamanho mínimo */
+    max-width: 1000px; /*Diz o tamanho máximo */
+    margin: auto;
+    border-bottom-left-radius: 10px; /*Faz com que apenas a borda esquerda e direita de baixo arredondem*/
+    border-bottom-right-radius: 10px; 
+}
+h1{
+  font-family: var(--titulo1), sans-serif;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  color: #000000;
+    text-transform: uppercase;
+}
+h2{
+  font-family: var(--titulo2), sans-serif;
+  font-size: 2em;
+  margin-top: 50px;
+  padding: 20px;
+  color: #000000;
+
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+ ul.autores > img{
+    width: 300px;
+  margin: 20px;
+  box-shadow: 0 0 20px #000000;
+  transition: 0.3s;
+}
+ul.autores > img:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #000000;
+}
+ul.arte > img{
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 0 20px #000000;
+  transition: 0.3s;
+}
+ul.arte > img:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #000000;
+}
+footer > p{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
